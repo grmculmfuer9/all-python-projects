@@ -1,0 +1,327 @@
+body {
+  font-family: "Montserrat", "sans-serif";
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  /* font-size: 3.4rem; */
+}
+
+h1,
+.big-heading {
+  font-size: 3.4rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: white;
+}
+
+/* For h2 heading */
+.price-text {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* For h3 heading */
+.feature-title {
+  font-weight: 520;
+  font-size: 1.5rem;
+}
+
+/* Conatiners */
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Navigation Bar */
+
+.container {
+  padding-bottom: 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu", "sans-serif";
+  font-size: 2.5rem;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 250;
+  color: white;
+}
+
+.collapse {
+  justify-content: flex-end;
+}
+
+/* Title */
+
+#title .container-fluid {
+  padding: 3% 13% 7%;
+}
+
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* #top-navbar {
+  background-color: #ff4c68;
+} */
+
+#title {
+  /* background-color: #ff4c68; */
+  text-align: left;
+}
+
+.col-lg-6 {
+  text-align: left;
+}
+
+/* Buttons */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Title Image */
+
+.title-image {
+  position: absolute;
+  margin-top: 40px;
+  width: 26%;
+  transform: rotate(25deg);
+}
+
+@media (max-width: 1028px) {
+  #title .col-lg-6,
+  #title .col-md-12 {
+    text-align: center;
+    /* background-color: white; */
+  }
+
+  #title img {
+    width: 30%;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
+
+/* Features */
+
+#features {
+  padding: 7%;
+  padding-bottom: 0;
+  margin-left: 5%;
+  margin-right: 7%;
+  background-color: #fff;
+  position: relative;
+}
+
+#features .col i {
+  margin-bottom: 30px;
+  color: #ef8172;
+}
+
+#features .col i:hover {
+  color: #ff4c88;
+  cursor: pointer;
+}
+
+/* #features .col h3 {
+  /* font-weight: 520;
+  font-size: 1.5rem; */
+/* } */
+
+#features .col p {
+  margin-top: 15px;
+  color: #8f8f8f;
+  font-size: 1rem;
+}
+
+/* Testimonial Section */
+
+#testimonials {
+  background-color: #ef8172;
+  color: #fff;
+}
+
+#testimonials img {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* .carousel-item {
+  padding: 7% 15%;
+} */
+
+/* Press */
+
+#press {
+  background-color: #ef8172;
+  padding: 3%;
+}
+
+#press img {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing */
+
+#pricing {
+  padding: 7% 13%;
+}
+
+#pricing h1 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+#pricing h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* #pricing .row { */
+/* width: 1100%; */
+/* } */
+
+#pricing .card {
+  height: 350px;
+}
+
+#pricing button {
+  position: relative;
+  margin-top: 10%;
+}
+
+#pricing .final-btn {
+  position: relative;
+  margin-top: 0;
+}
+
+@media (max-width: 1000px) and (min-width: 500px) {
+  .col-md-8 {
+    margin-left: 20%;
+  }
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.btn-bd-primary {
+  --bd-violet-bg: #ef8172;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #ff4c88;
+  --bs-btn-hover-border-color: #ff4c88;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #ff4c88;
+  --bs-btn-active-border-color: #ff4c88;
+}
+
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+#pricing .btn {
+  background-color: #ff4c68;
+}
+
+#pricing .border-primary {
+  border-color: #ff4c68 !important;
+}
+
+#pricing .text-bg-primary {
+  background-color: #ff4c68 !important;
+}
+
+/* Footer */
+.social-icon {
+  margin: 20px 10px;
+}

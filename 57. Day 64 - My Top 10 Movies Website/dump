@@ -1,0 +1,14 @@
+# movie = eval(request.args.get(key="movie"))
+# print(movie)
+# print(type(movie))
+# print(movie["title"])
+# new_movie = Movie(title=movie["title"], year=movie["release_date"], description=movie["overview"],
+#                   rating=0, review="Getting", ranking="N/A",
+#                     img_url=f"https://image.tmdb.org/t/p/w500/{movie['poster_path']}")
+# db.session.add(new_movie)
+# db.session.commit()
+
+# all_movies = db.session.query(Movie).all()
+    # for movie in all_movies:
+    #     print("hi")
+    #     print(movie.id)

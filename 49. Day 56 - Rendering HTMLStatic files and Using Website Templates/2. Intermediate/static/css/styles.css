@@ -1,0 +1,150 @@
+body {
+    margin: 0px;
+    text-align: center;
+    font-family: Barlow, serif;
+    background-image: linear-gradient(to right, #fff, #E3DFFD);
+}
+
+h1 {
+    padding: 20px;
+    font-family: Sacramento, cursive, brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light", 
+    "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 5.625rem;
+    width: 100%;
+    margin: 0;
+    color: #66BFBF;
+    line-height: 0.8;
+}
+
+h2 {
+    font-family: Montserrat, serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #66BFBF;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: Montserrat, serif;
+    color: #11999E;
+}
+
+div {
+    padding: 10px;
+}
+
+a {
+    color: #11999E;
+    text-decoration: None;
+    margin: 20px;
+    font-family: Montserrat, serif;
+}
+
+a:hover {
+    color: #30e3cb;
+}
+
+p {
+    color: #40514E;
+}
+
+hr {
+    border-style: None;
+    border-top-style: dotted;
+    border-width: 10px;
+    border-color: #18122B;
+    width: 13%;
+    margin: 40px auto;
+    margin-bottom: 50px;
+}
+
+/* Classes */
+.top-container {
+    background-image: linear-gradient(45deg, #C9EEFF, #eaf6f6);
+    position: relative;
+    padding-top: 100px;
+}
+
+.middle-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.bottom-container {
+    margin-top: 50px;
+    background-color: #66BFBF;
+    padding: 30px;
+    line-height: 2;
+}
+
+.upper-cloud {
+    position: relative;
+    left: 20%;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
+    padding: 20px;
+    margin: auto;
+}
+
+.profile-img {
+    height: 150px;
+    margin-bottom: 40px;
+}
+
+.my-skills {
+    margin-bottom: 60px;
+}
+
+.skill-row {
+    text-align: left;
+    margin: 100px auto;
+    line-height: 2;
+}
+
+.computer-img {
+    height: 150px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 30px;
+}
+
+.chillies-img {
+    height: 150px;
+    float: right;
+    margin-left: 30px;
+}
+
+.second-skill {
+    color: #11999E;
+}
+
+.get-in-top-bottom-h3 {
+    margin-top: 40px;
+}
+
+.contact-us-btn-upper {
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.btn {
+    background-image: linear-gradient(180deg, #11cdd4, #11999e);
+    /* background-color: #66BFBF; */
+    padding: 13px;
+    border-radius: 8px;
+    color: #EAF6F6;
+}
+
+.btn:hover {
+    color: #EAF6F6;
+    background-image: linear-gradient(45deg, #30e3cb, #2bc4ad);
+}
+
+.copyright {
+    color: #EAF6F6;
+}

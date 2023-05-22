@@ -1,0 +1,36 @@
+/* Following are the tags */
+body {
+    background-color: #ECF2FF;
+}
+
+h1 {
+    color: #655DBB;
+}
+
+img:hover {
+    border: 7px dotted;
+    border-width: 5px;
+    border-color: #DF2E38;
+    border-radius: 10%;
+}
+
+/* Following are classes */
+.bbq {
+    border: solid;
+    border-width: 5px;
+    border-color: #3E54AC;
+    border-radius: 50%;
+}
+
+.brocoli {
+    border: solid;
+    border-width: 5px;
+    border-color: #BFACE2;
+    border-radius: 50%;
+}
+
+
+/* Following are Ids */
+#bbq-heading {
+    color: #655DBB;
+}
