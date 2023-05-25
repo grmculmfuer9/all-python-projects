@@ -40,87 +40,87 @@ print(df_btc_monthly.head())
 # Matplotlib
 register_matplotlib_converters()
 
-# # Tesla Stock Price
-# plt.figure(figsize=(14, 8), dpi=120)
-# plt.title('Tesla Web Search vs Price', fontsize=18)
-#
-# ax1 = plt.gca()  # get current axis
-# ax2 = ax1.twinx()
-#
-# ax1.set_xlabel('Year', fontsize=14)
-# ax1.set_ylabel('TSLA Stock Price', color='#E6232E', fontsize=14)  # can use a HEX code
-# ax2.set_ylabel('Search Trend', color='skyblue', fontsize=14)  # or a named colour
-#
-# plt.xticks(fontsize=14, rotation=45)
-# plt.yticks(fontsize=14)
-#
+# Tesla Stock Price
+plt.figure(figsize=(14, 8), dpi=120)
+plt.title('Tesla Web Search vs Price', fontsize=18)
+
+ax1 = plt.gca()  # get current axis
+ax2 = ax1.twinx()
+
+ax1.set_xlabel('Year', fontsize=14)
+ax1.set_ylabel('TSLA Stock Price', color='#E6232E', fontsize=14)  # can use a HEX code
+ax2.set_ylabel('Search Trend', color='skyblue', fontsize=14)  # or a named colour
+
+plt.xticks(fontsize=14, rotation=45)
+plt.yticks(fontsize=14)
+
 years = mdates.YearLocator()
 months = mdates.MonthLocator()
 years_fmt = mdates.DateFormatter('%Y')
-#
-# ax1.set_ylim([0, 600])
-# ax1.set_xlim([df_tesla.MONTH.min(), df_tesla.MONTH.max()])
-#
-# ax1.xaxis.set_major_locator(years)
-# ax1.xaxis.set_minor_locator(months)
-# ax1.xaxis.set_major_formatter(years_fmt)
-#
-# ax1.plot(df_tesla.MONTH, df_tesla.TSLA_USD_CLOSE, color='#E6232E', linewidth=3)
-# ax2.plot(df_tesla.MONTH, df_tesla.TSLA_WEB_SEARCH, color='skyblue', linewidth=3)
-#
-# # BTC Price
-# plt.figure(figsize=(14, 8), dpi=120)
-# plt.title('Bitcoin News Search vs Resampled Price', fontsize=18)
-#
-# ax1 = plt.gca()  # get current axis
-# ax2 = ax1.twinx()
-#
-# ax1.set_xlabel('Year', fontsize=14)
-# ax1.set_ylabel('BTC Price', color='#E6232E', fontsize=14)  # can use a HEX code
-# ax2.set_ylabel('Search Trend', color='skyblue', fontsize=14)  # or a named colour
-#
-# plt.xticks(fontsize=14, rotation=45)
-# plt.yticks(fontsize=14)
-#
-# ax1.set_ylim(bottom=0, top=15000)
-# ax1.set_xlim([df_btc_monthly.index.min(), df_btc_monthly.index.max()])
-#
-# ax1.xaxis.set_major_locator(years)
-# ax1.xaxis.set_minor_locator(months)
-# ax1.xaxis.set_major_formatter(years_fmt)
-#
-# ax1.plot(df_btc_monthly.index, df_btc_monthly.CLOSE,
-#          color='#F08F2E', linewidth=3, linestyle='dashed')
-# ax2.plot(df_btc_monthly.index, df_btc_search.BTC_NEWS_SEARCH,
-#          color='skyblue', linewidth=3, marker='o')
 
-# # Unemployment Benefits 2019
-# plt.figure(figsize=(14, 8), dpi=120)
-# plt.title('Monthly Search of "Unemployment Benefits" in the U.S. vs the U/E Rate', fontsize=18)
-#
-# ax1 = plt.gca()  # get current axis
-# ax2 = ax1.twinx()
-#
-# ax1.set_xlabel('Year', fontsize=14)
-# ax1.set_ylabel('FRED U/E Rate', color='purple', fontsize=14)  # can use a HEX code
-# ax2.set_ylabel('Search Trend', color='skyblue', fontsize=14)  # or a named colour
-#
-# plt.xticks(fontsize=14, rotation=45)
-# plt.yticks(fontsize=14)
-#
-# ax1.set_ylim(bottom=df_unemployment.UNRATE.min(), top=df_unemployment.UNRATE.max())
-# ax1.set_xlim([df_unemployment.MONTH.min(), df_unemployment.MONTH.max()])
-#
-# ax1.xaxis.set_major_locator(years)
-# ax1.xaxis.set_minor_locator(months)
-# ax1.xaxis.set_major_formatter(years_fmt)
-#
-# ax1.grid(color='grey', linestyle='--')
-#
-# roll_df = df_unemployment[['UE_BENEFITS_WEB_SEARCH', 'UNRATE']].rolling(window=6).mean()
-#
-# ax1.plot(df_unemployment.MONTH, roll_df.UNRATE, 'purple', linewidth=3, linestyle='-.')
-# ax2.plot(df_unemployment.MONTH, roll_df.UE_BENEFITS_WEB_SEARCH, 'skyblue', linewidth=3)
+ax1.set_ylim([0, 600])
+ax1.set_xlim([df_tesla.MONTH.min(), df_tesla.MONTH.max()])
+
+ax1.xaxis.set_major_locator(years)
+ax1.xaxis.set_minor_locator(months)
+ax1.xaxis.set_major_formatter(years_fmt)
+
+ax1.plot(df_tesla.MONTH, df_tesla.TSLA_USD_CLOSE, color='#E6232E', linewidth=3)
+ax2.plot(df_tesla.MONTH, df_tesla.TSLA_WEB_SEARCH, color='skyblue', linewidth=3)
+
+# BTC Price
+plt.figure(figsize=(14, 8), dpi=120)
+plt.title('Bitcoin News Search vs Resampled Price', fontsize=18)
+
+ax1 = plt.gca()  # get current axis
+ax2 = ax1.twinx()
+
+ax1.set_xlabel('Year', fontsize=14)
+ax1.set_ylabel('BTC Price', color='#E6232E', fontsize=14)  # can use a HEX code
+ax2.set_ylabel('Search Trend', color='skyblue', fontsize=14)  # or a named colour
+
+plt.xticks(fontsize=14, rotation=45)
+plt.yticks(fontsize=14)
+
+ax1.set_ylim(bottom=0, top=15000)
+ax1.set_xlim([df_btc_monthly.index.min(), df_btc_monthly.index.max()])
+
+ax1.xaxis.set_major_locator(years)
+ax1.xaxis.set_minor_locator(months)
+ax1.xaxis.set_major_formatter(years_fmt)
+
+ax1.plot(df_btc_monthly.index, df_btc_monthly.CLOSE,
+         color='#F08F2E', linewidth=3, linestyle='dashed')
+ax2.plot(df_btc_monthly.index, df_btc_search.BTC_NEWS_SEARCH,
+         color='skyblue', linewidth=3, marker='o')
+
+# Unemployment Benefits 2019
+plt.figure(figsize=(14, 8), dpi=120)
+plt.title('Monthly Search of "Unemployment Benefits" in the U.S. vs the U/E Rate', fontsize=18)
+
+ax1 = plt.gca()  # get current axis
+ax2 = ax1.twinx()
+
+ax1.set_xlabel('Year', fontsize=14)
+ax1.set_ylabel('FRED U/E Rate', color='purple', fontsize=14)  # can use a HEX code
+ax2.set_ylabel('Search Trend', color='skyblue', fontsize=14)  # or a named colour
+
+plt.xticks(fontsize=14, rotation=45)
+plt.yticks(fontsize=14)
+
+ax1.set_ylim(bottom=df_unemployment.UNRATE.min(), top=df_unemployment.UNRATE.max())
+ax1.set_xlim([df_unemployment.MONTH.min(), df_unemployment.MONTH.max()])
+
+ax1.xaxis.set_major_locator(years)
+ax1.xaxis.set_minor_locator(months)
+ax1.xaxis.set_major_formatter(years_fmt)
+
+ax1.grid(color='grey', linestyle='--')
+
+roll_df = df_unemployment[['UE_BENEFITS_WEB_SEARCH', 'UNRATE']].rolling(window=6).mean()
+
+ax1.plot(df_unemployment.MONTH, roll_df.UNRATE, 'purple', linewidth=3, linestyle='-.')
+ax2.plot(df_unemployment.MONTH, roll_df.UE_BENEFITS_WEB_SEARCH, 'skyblue', linewidth=3)
 
 # Unemployment Benefits 2020
 plt.figure(figsize=(14, 8), dpi=120)
