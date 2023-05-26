@@ -103,7 +103,8 @@ g_bar = px.bar(df_free_vs_paid,
                x='Category',
                y='App',
                title='Free vs Paid Apps by Category',
-               barmode='group')
+               barmode='group',
+               color='Type')
 
 g_bar.update_layout(xaxis_title='Category',
                     yaxis_title='Number of Apps',
