@@ -20,12 +20,12 @@ select_image_label.grid(row=1, column=1)
 
 # Add Watermark Button
 add_watermark_button = tk.Button(window, text='Upload Watermark',
-                                 width=20, command=lambda: watermark_edit_start())
+                                 width=20, command=lambda: upload_watermark())
 add_watermark_button.grid(row=2, column=2)
 
 # Upload Images Button
 upload_image_button = tk.Button(window, text='Upload Files',
-                                width=20, command=lambda: add_watermark_start())
+                                width=20, command=lambda: non_watermark_images())
 upload_image_button.grid(row=3, column=0)
 
 # File Format Button Dropdown
@@ -69,12 +69,12 @@ percent_label.place(x=660, y=110)
 
 # Add Watermark Button
 add_watermark = tk.Button(window, text='Add Watermark',
-                          width=20, command=lambda: add_watermark())
+                          width=20, command=lambda: add_watermark_to_images())
 add_watermark.place(x=0, y=100)
 
 # Edit Watermark Button
 edit_watermark = tk.Button(window, text='Edit Watermark',
-                           width=20, command=lambda: watermark_edit())
+                           width=20, command=lambda: edit_watermark())
 edit_watermark.place(x=575, y=140)
 
 # Error label
@@ -87,6 +87,7 @@ watermark = ""
 
 
 def save_file(img, filename, x, location_result, file_format_result):
+    """Save Pillow Image at a location"""
     if location_result is not None:
         x = location_result
 
@@ -112,6 +113,7 @@ def save_file(img, filename, x, location_result, file_format_result):
 
 
 def read_values_for_watermark():
+    """Read width and height for watermark mentioned by the user"""
     width_result = width_entry.get()
     height_result = height_entry.get()
     if width_result == '':
@@ -141,6 +143,7 @@ def read_values_for_watermark():
 
 
 def get_file_format():
+    """Get the file format selected by the user"""
     file_format_result = menu.get()
 
     if file_format_result == 'Select File Format':
@@ -150,6 +153,7 @@ def get_file_format():
 
 
 def get_transparency():
+    """Get the transparency selected by the user"""
     transparency_result = transparency_entry.get()
 
     if transparency_result == '':
@@ -168,6 +172,7 @@ def get_transparency():
 
 
 def get_location_result():
+    """Get the location selected by the user"""
     location_result = location_dropdown.get()
 
     if location_result == '':
@@ -185,6 +190,7 @@ def get_location_result():
 
 
 def fetch_file_name(mode='s'):
+    """Fetch the file name/names specified by the user"""
     f_types = [('JPG files', '*.jpg'),
                ('PNG files', '*.png'),
                ('Image Files', '*.jpeg')]
@@ -197,7 +203,8 @@ def fetch_file_name(mode='s'):
     return filename
 
 
-def add_watermark_start():
+def non_watermark_images():
+    """Start the process of adding watermark"""
     global filenames_watermark
     filenames_watermark = fetch_file_name(mode='m')
     if len(filenames_watermark) == 0:
@@ -205,7 +212,8 @@ def add_watermark_start():
         return
 
 
-def add_watermark():
+def add_watermark_to_images():
+    """Add watermark to the image"""
     global filenames_watermark
     if isinstance(filenames_watermark, str):
         error_label['text'] = "Upload Images first"
@@ -233,12 +241,14 @@ def add_watermark():
         uploaded_image.close()
 
 
-def watermark_edit_start():
+def upload_watermark():
+    """Upload the watermark"""
     global filename_edit_watermark
     filename_edit_watermark = fetch_file_name()
 
 
-def watermark_edit():
+def edit_watermark():
+    """Edit the watermark"""
     global filename_edit_watermark, watermark
 
     if filename_edit_watermark == "":
@@ -269,7 +279,6 @@ def watermark_edit():
         transparency_result = get_transparency()
         file_format_result = get_file_format()
 
-        # if transparency_result != 100:
         # Transparent Image
         value = int((transparency_result / 100) * 255)
         print(value)
