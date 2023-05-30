@@ -1,0 +1,18 @@
+.svg-inline--fa {
+  display: inline-block;
+  margin-left: -5rem;
+  margin-top: -5rem;
+}
+
+.img-svg {
+  width: 10%;
+  height: auto;
+}
+
+.header_background_img {
+  width: 110%;
+  height: 600px;
+  background-image: url("background/background-header-2.jpg");
+  background-size: 110% 100%;
+  margin-left: -2rem;
+}
