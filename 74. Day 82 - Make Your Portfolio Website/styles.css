@@ -1,18 +1,172 @@
-.svg-inline--fa {
-  display: inline-block;
-  margin-left: -5rem;
-  margin-top: -5rem;
+@font-face {
+  font-family: 'Eurostile';
+  src: url('fonts/Eurostile.ttf') format('truetype');
+}
+
+body {
+  background: #fff;
+  background-image: linear-gradient(to right top, #C9EEFF, #fff, #C9EEFF);
+  font-family: 'Eurostile', 'Michroma', 'Titillium Web', 'Montserrat', 'europa', sans-serif !important;
+  /* font-family: 'Michroma', 'Titillium Web', 'Montserrat', 'europa', sans-serif; */
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #003087;
+}
+
+main {
+  display: flex;
+}
+
+main div {
+  width: 40%;
+  height: 50%;
+}
+
+main div img {
+  margin: 20% 10%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main hr {
+  /* width: 50%; */
+  margin: 12% 12%;
+  width: 0;
+  height: 17rem;
+  border-left: 2px solid #000;
+  color: #000;
+}
+
+.navbar {
+  /* background-color: #ACBCFF; */
 }
 
 .img-svg {
-  width: 10%;
-  height: auto;
+  font-size: inherit;
+  height: 6rem;
+  width: 6rem;
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+div .portfolio-btn {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* text-size-adjust: 100%;
+  box-sizing: inherit;
+  margin: 0;
+  font: inherit; */
+  /* text-decoration: none; */
+  /* -webkit-appearance: none; */
+  align-items: center;
+  /* border: 1px solid transparent; */
+  box-shadow: none;
+  display: inline-flex;
+  height: 2.5em;
+  line-height: 1.5;
+  position: relative;
+  vertical-align: top;
+  user-select: none;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 400 !important;
+  -webkit-transition: all .2s ease-in-out;
+  /* font-family: "europa", sans-serif; */
+  border-radius: 9999px;
+  background-color: #003087;
+  /* border-color: #6E07F3; */
+  color: #fff;
+  border-width: 2px;
+  font-size: 18px;
+  padding: 1.2rem;
+  border: none;
+}
+
+div .portfolio-btn:hover {
+  background-color: transparent;
+  color: #003087;
+  border-color: #003087;
+}
+
+div .about-btn {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* text-size-adjust: 100%;
+  box-sizing: inherit;
+  margin: 0;
+  font: inherit; */
+  /* text-decoration: none; */
+  /* -webkit-appearance: none; */
+  align-items: center;
+  /* border: 1px solid transparent; */
+  box-shadow: none;
+  display: inline-flex;
+  height: 2.5em;
+  line-height: 1.5;
+  position: relative;
+  vertical-align: top;
+  user-select: none;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 400 !important;
+  -webkit-transition: all .2s ease-in-out;
+  /* font-family: "europa", sans-serif; */
+  border-radius: 9999px;
+  background-color: transparent;
+  border-color: #003087;
+  color: #003087;
+  border-width: 2px;
+  font-size: 18px;
+  padding: 1.2rem;
+}
+
+div .about-btn:hover {
+  background-color: #003087;
+  color: #fff;
+  border-color: #003087;
 }
 
 .header_background_img {
   width: 110%;
-  height: 600px;
+  height: 400px;
   background-image: url("background/background-header-2.jpg");
-  background-size: 110% 100%;
-  margin-left: -2rem;
+  background-size: 100% 100%;
+}
+
+#navbarNavAltMarkup {
+  justify-content: end;
+  font-size: 1rem;
+  margin-right: 3.5rem;
+}
+
+#intro {
+  text-align: center;
+  width: 50%;
+  height: 40%;
+  position: absolute;
+  right: 7rem;
+  top: 16rem;
+}
+
+#intro h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #003087;
+}
+
+#intro h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #000;
+  /* font-family: 'Titillium Web', 'Montserrat', 'europa', sans-serif; */
 }
