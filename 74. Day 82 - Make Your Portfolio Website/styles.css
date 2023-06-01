@@ -1,12 +1,31 @@
 @font-face {
-  font-family: 'Eurostile';
-  src: url('fonts/Eurostile.ttf') format('truetype');
+  font-family: "Eurostile";
+  src: url("fonts/Eurostile.ttf") format("truetype");
+}
+
+html {
+  --color-grey-100: rgb(236, 236, 236);
+  --color-grey-400: rgb(134, 134, 134);
+  --color-grey-600: rgb(58, 58, 58);
+  --color-grey-900: rgb(41, 41, 41);
+
+  --color-primary-300: rgb(167, 226, 255);
+  --color-primary-700: rgb(0, 170, 255);
+
+  --size-1: 18px;
+  --size-3: 30px;
+  --size-5: 50px;
+
+  background-color: var(--color-grey-100);
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
 }
 
 body {
   background: #fff;
-  background-image: linear-gradient(to right top, #C9EEFF, #fff, #C9EEFF);
-  font-family: 'Eurostile', 'Michroma', 'Titillium Web', 'Montserrat', 'europa', sans-serif !important;
+  background-image: linear-gradient(to right top, #c9eeff, #fff, #c9eeff);
+  font-family: "Eurostile", "Michroma", "Titillium Web", "Montserrat", "europa",
+    sans-serif !important;
   /* font-family: 'Michroma', 'Titillium Web', 'Montserrat', 'europa', sans-serif; */
 }
 
@@ -16,19 +35,15 @@ h1 {
   color: #003087;
 }
 
-main {
-  display: flex;
-}
-
 main div {
   width: 40%;
   height: 50%;
 }
 
 main div img {
-  margin: 20% 10%;
-  width: 100%;
-  height: 100%;
+  /* margin: 20% 10%; */
+  width: 120%;
+  height: 240px;
   object-fit: cover;
 }
 
@@ -37,8 +52,7 @@ main hr {
   margin: 12% 12%;
   width: 0;
   height: 17rem;
-  border-left: 2px solid #000;
-  color: #000;
+  border-left: 2px solid #9db2bf;
 }
 
 .navbar {
@@ -78,7 +92,7 @@ div .portfolio-btn {
   text-align: center;
   white-space: nowrap;
   font-weight: 400 !important;
-  -webkit-transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
   /* font-family: "europa", sans-serif; */
   border-radius: 9999px;
   background-color: #003087;
@@ -119,7 +133,7 @@ div .about-btn {
   text-align: center;
   white-space: nowrap;
   font-weight: 400 !important;
-  -webkit-transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
   /* font-family: "europa", sans-serif; */
   border-radius: 9999px;
   background-color: transparent;
@@ -142,6 +156,62 @@ div .about-btn:hover {
   background-image: url("background/background-header-2.jpg");
   background-size: 100% 100%;
 }
+
+#first-main-section {
+  display: flex;
+  width: 100%;
+  /* height: 600px; */
+  height: 530px;
+}
+
+#second-main-section {
+  display: flex;
+  width: 100%;
+  height: 475px;
+}
+
+/* SVG Blob code 1 */
+.rotate {
+  animation-name: ani-rotate;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+@keyframes ani-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* SVG Blob code 2 */
+
+.float {
+  animation-name: ani-float;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes ani-float {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+/* End SVG blob codes */
 
 #navbarNavAltMarkup {
   justify-content: end;
@@ -169,4 +239,176 @@ div .about-btn:hover {
   font-weight: 600;
   color: #000;
   /* font-family: 'Titillium Web', 'Montserrat', 'europa', sans-serif; */
+}
+
+#blob_gradient_1 {
+  position: absolute;
+  margin-top: 5rem;
+  margin-left: 6rem;
+}
+
+#left-top-main {
+  /* position: relative; */
+  text-align: right;
+  /* padding: 0 5rem; */
+  margin-top: 9.5rem;
+  margin-left: 6rem;
+  /* margin-right: 4rem; */
+  /* background-image: url("blobs/gradient_blob_1.png");
+  background-size: 200% 200%; */
+}
+
+#right-top-main {
+  text-align: left;
+  /* padding: 0 5rem; */
+  margin-top: 9.5rem;
+  margin-right: 6rem;
+  color: #526d82;
+}
+
+#right-top-main h3 {
+  font-weight: 600;
+}
+
+#right-top-main p {
+  font-weight: 599;
+}
+
+/* Skills section styles */
+.card-container {
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+  height: auto;
+  margin: 50px auto;
+  box-shadow: 3px 3px 10px rgb(201, 200, 200);
+  transition: transform 0.5s ease;
+}
+
+.card-container:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  color: var(--color-grey-600);
+  text-align: left;
+  padding: 30px 50px 0px 50px;
+  margin: 10px 0;
+  font-family: "Zilla Slab", serif;
+  font-weight: 600;
+}
+
+.card-info {
+  color: var(--color-grey-400);
+  text-align: left;
+  padding: 0 50px;
+  margin: 10px 0 30px 0;
+}
+
+.project-title {
+  /* color: var(--color-grey-900); */
+  /* background-color: var(--color-primary-300); */
+  color: #d4adfc;
+  background-color: #1d267d;
+  text-align: center;
+  margin: 30px auto 10px auto;
+  font-size: var(--size-3);
+  font-weight: 600;
+}
+
+.project-subtitle {
+  color: var(--color-grey-400);
+  text-align: center;
+  margin: 10px 0 0 0;
+  padding: 0 50px;
+}
+
+.sub-details {
+  width: 300px;
+  height: auto;
+  margin: 10px 50px;
+  /* text-align: left; */
+}
+
+.sub-feature {
+  display: flex;
+  /* text-align: center; */
+  height: 60px;
+  width: 200px;
+  margin: 3% 0;
+  text-align: left;
+}
+
+.icon {
+  display: flex;
+  width: 20px;
+  text-align: center;
+  margin: auto;
+  margin-right: 15px;
+}
+
+.sub-feature-text {
+  color: var(--color-grey-600);
+  width: 200px;
+  padding: 2px;
+  margin: auto 5px;
+}
+
+.button {
+  color: var(--color-primary-700);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 70%;
+  padding: 10px;
+  margin: 0 0 30px 0;
+  border: 2px solid rgb(224, 224, 224);
+  font-size: var(--size-1);
+  font-weight: 600;
+  transition: background-color 0.5s ease-out;
+}
+
+.button-container {
+  text-align: center;
+  /* margin: 30px 0 0 0; */
+  width: auto;
+  height: auto;
+  margin-top: 30px;
+}
+
+.button:hover {
+  color: white;
+  background-color: var(--color-primary-700);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.contact-details h3 {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-size: var(--size-5);
+  color: #1D267D;
+}
+
+.social-media {
+  /* margin-top: 500px; */
+  display: grid;
+  grid-template-columns: auto auto;
+  /* justify-content: center; */
+  /* margin: 30px 0; */
+  margin: 0 auto;
+  width: 60%;
+  height: 30%;
+}
+
+.social-media p {
+  /* width: 30%; */
+  height: 20%;
+}
+
+#footer {
+  height: 400px;
+  text-align: center;
+  margin: auto;
+  padding: 4%;
+  /* background-color: #ACBCFF; */
+  background-image: linear-gradient(45deg, #AEE2FF, #B799FF);
 }
