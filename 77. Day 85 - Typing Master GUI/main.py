@@ -135,28 +135,28 @@ def show_results():
 
 # Main Window
 root = tk.Tk()
-root.config(bg='white')
+root.config(bg='#E6FFFD')
 root.title("Typing Master")
 root.geometry("900x650")
 root.resizable(False, False)
 
 # Title
-title = tk.Label(root, text="Typing Master", font=("Arial", 30), bg="white")
+title = tk.Label(root, text="Typing Master", font=("Arial", 30), bg="#E6FFFD", fg="#B799FF")
 title.place(relx=0.5, rely=0.1, anchor="center")  # 320 letters max
 
 # Typing test text
-typing_test_text = tk.Text(root, font=("Arial", 15), bg="white", width=35, height=7)
+typing_test_text = tk.Text(root, font=("Arial", 15), bg="white", width=35, height=7, fg="#ACBCFF")
 typing_test_text.place(relx=0.4, rely=0.35, anchor="center")
 typing_test_text.insert(tk.END, get_random_sentence())
 typing_test_text.config(state='disabled')
 
 # Show time label
-show_time_label = tk.Label(root, text="Time: 0s", font=("Arial", 15), bg="white")
+show_time_label = tk.Label(root, text="Time: 0s", font=("Arial", 15), bg="#E6FFFD", fg="#ACBCFF")
 show_time_label.place(relx=0.57, rely=0.5, anchor="center")
 
 # Typing test entry
 key_tracker = KeyTracker()
-typing_test_entry = tk.Text(root, font=("Arial", 15), bg="white", width=35, height=7)
+typing_test_entry = tk.Text(root, font=("Arial", 15), bg="white", width=35, height=7, fg="#ACBCFF")
 typing_test_entry.place(relx=0.4, rely=0.65, anchor="center")
 typing_test_entry.focus()
 typing_test_entry.bind_all("<KeyPress>", key_tracker.report_key_press)
@@ -164,21 +164,21 @@ typing_test_entry.bind_all('<KeyRelease>', key_tracker.report_key_release)
 
 # Start button
 start_button = tk.Button(root, text="Start", font=("Arial", 15), bg="white", width=7, height=1,
-                         command=start_button_function)
+                         command=start_button_function, fg="#ACBCFF")
 start_button.place(relx=0.3, rely=0.85, anchor="center")
 
 # Reset button
 reset_button = tk.Button(root, text="Reset", font=("Arial", 15), bg="white", width=7, height=1,
-                         command=reset_button_function)
+                         command=reset_button_function, fg="#ACBCFF")
 reset_button.place(relx=0.5, rely=0.85, anchor="center")
 
 # Change text button
-change_text_button = tk.Button(root, text="Change Text", font=("Arial", 15),
-                               bg="white", width=12, height=1, command=change_text)
+change_text_button = tk.Button(root, text="Change Text", font=("Arial", 15), bg="white", width=12, height=1,
+                               command=change_text, fg="#ACBCFF")
 change_text_button.place(relx=0.4, rely=0.93, anchor="center")
 
 # Results Text
-results_text = tk.Text(root, font=("Arial", 15), bg="white", width=15, height=4)
+results_text = tk.Text(root, font=("Arial", 15), bg="white", width=15, height=4, fg="#ACBCFF")
 results_text.place(x=615, y=146)
 results_text.insert(tk.END, "WPM: 0\n\nAccuracy: 0%")
 results_text.config(state='disabled')
