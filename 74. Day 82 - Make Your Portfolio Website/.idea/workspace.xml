@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44ac4a2-2eba-4b9a-8455-cd6159d3f1f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d44ac4a2-2eba-4b9a-8455-cd6159d3f1f3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +25,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/User/Desktop/All Folders and Files/100 days of Python/74. Day 82 - Make Your Portfolio Website"
+    "last_opened_file_path": "C:/Users/User/Desktop/All Folders and Files/100 days of Python/77. Day 85 - Typing Master GUI"
   }
 }]]></component>
   <component name="RunManager">
