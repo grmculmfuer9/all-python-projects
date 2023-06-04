@@ -1,0 +1,33 @@
+body {
+  background-color: #fff;
+  font-family: "IBM Plex Serif", "Inter", "Roboto", "Nunito", "Crimson Text",
+    "Montserrat", "IBM Plex Sans", serif;
+}
+
+.navbar {
+  --navbar-text-color: #d4adfc;
+  --navbar-background-color: #5c469c;
+  padding: 0.5% 2%;
+  background-color: var(--navbar-background-color);
+  color: var(--navbar-text-color);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--navbar-text-color);
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-nav .nav-item {
+  padding: 0 1.5rem !important;
+}
+
+.nav-link {
+  color: var(--navbar-text-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
