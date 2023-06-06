@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
 from flask_login import UserMixin, LoginManager, login_user, login_required, logout_user, current_user
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 Bootstrap(app)
 
@@ -37,8 +37,8 @@ class TodoList(db.Model):
     todo_author = relationship("User", back_populates="todos")
 
 
-# with app.app_context():
-#     db.create_all()
+with app.app_context():
+    db.create_all()
 
 
 @login_manager.user_loader
@@ -66,8 +66,9 @@ def home():
 @login_required
 def add_item():
     if request.method == 'POST':
-        task = request.form['task']
-        is_task_present = TodoList.query.filter_by(task=task).first()
+        task = request.form['task'].title()
+        is_task_present = TodoList.query.filter_by(author_id=current_user.id, task=task).first()
+        # is_task_present = TodoList.query.filter_by(task=task).first()
         if is_task_present != None:
             message = f'{task} task already present'
             flash(message)
@@ -86,7 +87,8 @@ def add_item():
 @app.route('/delete/<int:item_id>', methods=['GET', 'POST'])
 # @login_required
 def complete_item(item_id):
-    item = TodoList.query.get(item_id)
+    item = TodoList.query.filter_by(author_id=current_user.id, id=item_id).first()
+    # item = TodoList.query.get(item_id)
     if request.method == 'POST':
         print(item_id)
         db.session.delete(item)
