@@ -33,6 +33,9 @@
       type="text/css"
       href="{{ url_for('static', filename='css/styles.css') }}"
     />
+
+    <!-- Link to JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -50,9 +53,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#">Home</a>
-          <a class="nav-item nav-link" href="#">New List</a>
-          <a class="nav-item nav-link" href="#">Login</a>
+          <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+          {% if not has_logged_in %}
+          <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+          <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+          {% else %}
+          <a class="nav-item nav-link" href="{{ url_for('new_list') }}">New List</a>
+          <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+          {% endif %}
           <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
         </div>
       </div>

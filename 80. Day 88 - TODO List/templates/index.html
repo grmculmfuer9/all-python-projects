@@ -1,23 +1,39 @@
 {% include "header.html" %}
 
 <div id="todo-list">
-  <h3>Tasks left: <span id="task-count">{{ task_count }}</span></h3>
+  <h3>Tasks left: <span id="task-count">{{ count }}</span></h3>
 
   <ul class="list-group">
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for
+    message in messages %}
     <li class="list-group-item">
-<<<<<<< HEAD
-      <label class="container">
-=======
-      <label class="container"
-        >
->>>>>>> 5e079b32bffcb6bb29ff8bd2716c71f6a6a0a855
-        <input type="checkbox" checked="checked" />
-        <span class="checkmark"></span>One
-      </label>
+      <p class="error-message">{{ message }}</p>
     </li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    {% endfor %} {% endif %} {% endwith %}
+    {% for item in all_items: %}
+    <li class="list-group-item">
+      <label class="container">
+        {% if item.is_completed %}
+        <input type="checkbox" checked="checked" />
+        {% else %}
+        <input
+          type="checkbox"
+          name="id"
+          value="{{ item.id }}"
+          onchange="updateHref(item_id='{{ item.id }}')"
+          id="task_id"
+        />
+        {% endif %}
+        <span class="checkmark"></span>{{ item.task }}
+      </label>
+      {% endfor %}
+    </li>
+
+    <li class="list-group-item">
+      <form action="{{ url_for('add_item') }}" method="POST">
+        <input type="text" name="task" />
+        <input type="submit" name="Add" value="Add" />
+      </form>
+    </li>
   </ul>
 </div>
