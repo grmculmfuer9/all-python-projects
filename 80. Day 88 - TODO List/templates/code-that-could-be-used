@@ -1,0 +1,9 @@
+<ul id="tasks">
+        {% for task in tasks %}
+        <li>
+            <input type="checkbox" class="task-checkbox" data-id="{{ task.id }}" {% if task.done %}checked{% endif %}>
+            <span class="task-name {% if task.done %}task-done{% endif %}">{{ task.name }}</span>
+            <a href="#" class="delete-task" data-id="{{ task.id }}">x</a>
+        </li>
+        {% endfor %}
+    </ul>
