@@ -1,21 +1,62 @@
 body {
-  background-color: #fff;
+  /* background-color: #fff; */
   font-family: "IBM Plex Serif", "Inter", "Roboto", "Nunito", "Crimson Text",
     "Montserrat", "IBM Plex Sans", serif;
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    100deg,
+    #cbf1f5 0%,
+    #e3fdfd 50%,
+    #cbf1f5 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    100deg,
+    #cbf1f5 0%,
+    #e3fdfd 50%,
+    #cbf1f5 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(100deg, #cbf1f5 0%, #e3fdfd 50%, #cbf1f5 100%);
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#CBF1F5', endColorstr='#CBF1F5', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    100deg,
+    #cbf1f5 0%,
+    #e3fdfd 50%,
+    #cbf1f5 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(100deg, #cbf1f5 0%, #e3fdfd 50%, #cbf1f5 100%);
 }
 
 .navbar {
   --navbar-text-color: #d4adfc;
   --navbar-background-color: #5c469c;
+  --navbar-text-color-hover: #fff;
   padding: 0.5% 2%;
   background-color: var(--navbar-background-color);
   color: var(--navbar-text-color);
+}
+
+.navbar:hover {
+  color: var(--navbar-text-color-hover);
 }
 
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--navbar-text-color);
+}
+
+.navbar-brand:hover {
+  color: var(--navbar-text-color-hover);
 }
 
 .navbar-collapse {
@@ -30,4 +71,89 @@ body {
   color: var(--navbar-text-color);
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--navbar-text-color-hover);
+}
+
+#todo-list {
+  background-color: #000;
+  width: 25rem;
+  height: auto;
+  color: #fff;
+  text-align: center;
+}
+
+.list-group {
+  text-align: left;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  padding: auto;
+  width: 7px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

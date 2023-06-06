@@ -1,1 +1,18 @@
 {% include "header.html" %}
+
+<div id="todo-list">
+  <h3>Tasks left: <span id="task-count">{{ task_count }}</span></h3>
+
+  <ul class="list-group">
+    <li class="list-group-item">
+      <label class="container">
+        <input type="checkbox" checked="checked" />
+        <span class="checkmark"></span>One
+      </label>
+    </li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Morbi leo risus</li>
+    <li class="list-group-item">Porta ac consectetur ac</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+</div>
