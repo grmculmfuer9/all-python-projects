@@ -37,7 +37,8 @@ body {
 }
 
 .navbar {
-  --navbar-text-color: #d4adfc;
+  /* --navbar-text-color: #d4adfc; */
+  --navbar-text-color: #e3fdfd;
   --navbar-background-color: #5c469c;
   --navbar-text-color-hover: #fff;
   padding: 0.5% 2%;
