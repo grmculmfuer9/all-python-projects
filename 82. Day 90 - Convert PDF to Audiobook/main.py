@@ -28,7 +28,6 @@ def add_files():
 
     f_types = [('PDF files', '*.pdf')]
     temp_filenames = filedialog.askopenfilenames(filetypes=f_types)
-    print(type(filenames))
     filenames.extend(temp_filenames)
 
     if len(temp_filenames) == 0:
