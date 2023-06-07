@@ -142,7 +142,7 @@ root.resizable(False, False)
 
 # Title
 title = tk.Label(root, text="Typing Master", font=("Arial", 30), bg="#E6FFFD", fg="#B799FF")
-title.place(relx=0.5, rely=0.1, anchor="center")  # 320 letters max
+title.place(relx=0.5, rely=0.1, anchor="center")
 
 # Typing test text
 typing_test_text = tk.Text(root, font=("Arial", 15), bg="white", width=35, height=7, fg="#ACBCFF")
