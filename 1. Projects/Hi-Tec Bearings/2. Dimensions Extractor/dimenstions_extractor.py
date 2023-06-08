@@ -4,10 +4,10 @@ import sys
 import re
 
 
-def remove_html_tags(text):
+def remove_html_tags(text_to_be_cleaned):
     """Remove html tags from a string"""
     clean = re.compile('<.*?>')
-    return re.sub(clean, '', text)
+    return re.sub(clean, '', text_to_be_cleaned)
 
 
 # Get the absolute path to the directory containing the executable file
