@@ -4,10 +4,24 @@ from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
 from flask_login import UserMixin, LoginManager, login_user, login_required, logout_user, current_user
+import os
+import sys
+
+base_path = os.path.abspath(os.path.dirname(sys.argv[0]))
+
+# Set the template and static directories relative to the base path
+template_dir = os.path.join(base_path, 'templates')
+static_dir = os.path.join(base_path, 'static')
 
 app = Flask(__name__, template_folder='templates')
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 Bootstrap(app)
+
+# Set the template directory path for Flask
+app.template_folder = template_dir
+
+# Set the template directory path for Flask
+app.static_folder = static_dir
 
 # CONNECT TO DB
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo-list.db'

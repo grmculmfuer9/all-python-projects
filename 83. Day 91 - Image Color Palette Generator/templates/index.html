@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Image Color Palette Generator</title>
+
+    <!-- Main CSS styling file -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
+
+    <!-- Custom fonts for this template -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=IBM+Plex+Sans&family=IBM+Plex+Serif&family=Inter&family=Montserrat&family=Nunito&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+
+    <!-- Link to JavaScript file
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="{{ url_for('home') }}"
+        >Image Color Palette Generator</a
+      >
+    </nav>
+
+    <div id="upload-files">
+      <form
+        action="{{ url_for('result') }}"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <!-- Hidden file input -->
+        <input
+          type="file"
+          name="files"
+          accept="image/*"
+          multiple
+          class="file-input"
+        />
+
+        <!-- Custom button that triggers the file input -->
+        <label for="file-input" class="custom-button">Upload Files</label>
+
+        <input type="submit" value="Result" id="result" />
+      </form>
+    </div>
+
+    <!-- <div id="all-color-palettes"> -->
+    <div id="colors-list">
+      {% for item in all_items %}
+      <ul class="list-group">
+        <li class="list-group-item">
+            <label for="container">
+                <img src="{{ url_for('static', filename='images/'+item[0]) }}" alt="image" class="img-palette">
+            </label>
+        </li>
+        {% for color, count in item[1].items() %}
+        <li class="list-group-item">
+          <div class="square"style="background-color: rgb{{ color }};"></div>
+          <label class="container">{{ color }}: {{ count }}</label>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </div>
+
+    <!-- </div> -->
+
+    <script>
+      // Trigger the file input when the custom button is clicked
+      document
+        .querySelector(".custom-button")
+        .addEventListener("click", function () {
+          document.querySelector(".file-input").click();
+        });
+    </script>
+  </body>
+</html>
