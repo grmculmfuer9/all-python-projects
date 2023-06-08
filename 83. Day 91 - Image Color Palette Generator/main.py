@@ -44,9 +44,6 @@ print(template_dir)
 print(static_dir)
 print(base_path)
 
-
-# print(getattr(sys, '_MEIPASS'))
-
 @app.route('/')
 def home():
     global all_colors_count
@@ -54,12 +51,18 @@ def home():
     return render_template('index.html', all_items=all_colors_count)
 
 
-@app.route('/upload', methods=['GET', 'POST'])
-def upload_file():
-    global files, all_colors_count
+@app.route('/add_files', methods=['GET', 'POST'])
+def add_files():
+    global files
     if request.method == 'POST':
-        files = request.files.getlist('files')
-        return 'file uploaded successfully'
+        temp_files = request.files.getlist('add_file')
+        print(temp_files)
+        print(len(temp_files))
+        if len(files) == 0 or files[0].filename == '':
+            flash('No files selected!')
+            return redirect(url_for('home'))
+        files.extend(temp_files)
+    return redirect(url_for('home'))
 
 
 @app.route('/result', methods=['GET', 'POST'])
@@ -67,8 +70,8 @@ def result():
     global files, all_colors_count
     if request.method == 'POST':
         files = request.files.getlist('files')
-        if len(files) == 0:
-            flash('No file selected')
+        if len(files) == 0 or files[0].filename == '':
+            flash('No files selected!')
             return redirect(url_for('home'))
         for f in files:
             print(f)
@@ -76,7 +79,7 @@ def result():
             top_ten_colors(f)
             if len(all_colors_count) > 0:
                 print(all_colors_count[-1])
-        flash('File(s) successfully uploaded')
+        flash('File(s) successfully uploaded!')
     return redirect(url_for('home'))
 
 
