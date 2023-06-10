@@ -176,9 +176,6 @@ def variants_detection():
         else:
             for value in item_individual:
                 print(df.loc[df['Option1 Value'] == item, 'Bore'])
-                # print(df.loc[df['Option1 Value'] == item, 'Bore'][0])
-                # print(df.loc[df['Option1 Value'] == item, 'Bore'][1])
-                # print('value')
                 if value in bore_possible_variants:
                     print(value, value in bore_possible_variants, 'bore')
                     index = bore_possible_variants.index(value)
