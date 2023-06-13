@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.keys import Keys
 
-OBSTACLE_AREA_COORDINATES = (380, 640, 900, 760)
+OBSTACLE_AREA_COORDINATES = (380, 645, 950, 760)
 GAME_AREA_COORDINATES = (20, 580, 800, 760)
 
 
@@ -49,7 +49,7 @@ while True:
     if check_obstacle():
         driver.find_element(value="t").send_keys(Keys.SPACE)
         print('obstacle')
-        time.sleep(0.0001)
+        time.sleep(0.01)
         print('-------------------')
 
     if keyboard.is_pressed('q'):
