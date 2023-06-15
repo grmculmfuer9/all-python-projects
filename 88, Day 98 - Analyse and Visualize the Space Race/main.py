@@ -1,7 +1,6 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.express as px
-from plotly.express.colors import sequential
-import matplotlib.pyplot as plt
 # import seaborn as sns
 import pycountry
 
@@ -117,8 +116,8 @@ money_spent_by_organizations = money_spent_by_organizations[(money_spent_by_orga
 # print(money_spent_by_organizations)
 
 # Make a column for the average price per launch
-money_spent_by_organizations['Average_Price_Per_Launch'] = money_spent_by_organizations['Price'] /  \
-                                                             money_spent_by_organizations['Total_Launches']
+money_spent_by_organizations['Average_Price_Per_Launch'] = money_spent_by_organizations['Price'] / \
+                                                           money_spent_by_organizations['Total_Launches']
 print(money_spent_by_organizations)
 
 # Chart the Number of Launches per Year
@@ -226,13 +225,14 @@ filtered_data = df_data.dropna(subset=['Mission_Status'])
 
 # Create a line chart that shows the percentage of failures over time
 plt.figure(figsize=(8, 5), dpi=120)
-filtered_data.groupby('Year')['Mission_Status'].apply(lambda x: ((x == 'Failure').sum() / len(x)) * 100).plot(kind='line')
+filtered_data.groupby('Year')['Mission_Status'].apply(lambda x: ((x == 'Failure').sum() / len(x)) * 100).plot(
+    kind='line')
 plt.xlabel('Year')
 plt.ylabel('Percentage of Failures (%)')
 plt.ylim(0, 100)
 plt.show()
 
-# For Every Year Show which Country was in the Lead in terms of Total Number of Launches up to and including 2020)
+# For Every Year Show which Country was in the Lead in terms of Total Number of Launches up to and including 2020
 launches_per_year = df_data['Year'].value_counts().sort_index()
 launches_per_year.plot(kind='bar', figsize=(8, 5))
 plt.xlabel('Year')
