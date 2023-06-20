@@ -1,8 +1,6 @@
 import pandas as pd
-import numpy as np
 
 import seaborn as sns
-import plotly.express as px
 import matplotlib.pyplot as plt
 
 from sklearn.linear_model import LinearRegression
@@ -36,12 +34,11 @@ df_data['S'] = pd.to_numeric(df_data['S'], errors='coerce')
 df_data['EXP'] = pd.to_numeric(df_data['EXP'], errors='coerce')
 df_data['EARNINGS'] = pd.to_numeric(df_data['EARNINGS'], errors='coerce')
 
-# # Visualize the features
-# sns.set(style='whitegrid')
-# # Exclude column ID in pairplot
-# sns.pairplot(df_data[['S', 'EXP', 'EARNINGS']])
-# plt.subplots_adjust(top=0.9)
-# plt.show()
+# Visualize the features
+sns.set(style='whitegrid')
+sns.pairplot(df_data[['S', 'EXP', 'EARNINGS']])
+plt.subplots_adjust(top=0.9)
+plt.show()
 
 # Split Training & Test Dataset
 # We can't use all the entries in our dataset to train our model. Keep 20% of the data for later as a testing dataset
@@ -67,15 +64,15 @@ print(f'Equation of the model: EARNINGS = {linear_model.coef_[0]:.2f} * S + {lin
       f'{linear_model.intercept_:.2f}')
 
 """Analyse the Estimated Values & Regression Residuals
-How good our regression is also depends on the residuals - the difference between the model's predictions ( 𝑦̂ 𝑖 ) and 
+How good our regression is also depends on the residuals - the difference between the model's predictions ( 𝑦̂ 𝑖 ) and
 the true values ( 𝑦𝑖 ) inside y_train. Do you see any patterns in the distribution of the residuals?"""
-# # Distribution of Residuals
-# plt.figure(figsize=(9, 7))
-# plt.title('Distribution of Residuals')
-# sns.histplot(linear_model.predict(x_train), label='Test', kde=True, color='red')
-# sns.histplot(y_train, label='Train', kde=True, color='blue', alpha=0.5)
-# plt.legend()
-# plt.show()
+# Distribution of Residuals
+plt.figure(figsize=(9, 7))
+plt.title('Distribution of Residuals')
+sns.histplot(linear_model.predict(x_train), label='Test', kde=True, color='red')
+sns.histplot(y_train, label='Train', kde=True, color='blue', alpha=0.5)
+plt.legend()
+plt.show()
 
 """Use Your Model to Make a Prediction
 How much can someone with a bachelors degree (12 + 4) years of schooling and 5 years work experience expect 
