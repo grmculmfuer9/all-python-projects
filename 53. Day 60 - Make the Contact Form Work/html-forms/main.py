@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request
-import requests
 import smtplib
+
+import requests
+from flask import Flask, render_template, request
 
 BLOG_API = "https://api.npoint.io/c790b4d5cab58020d391"
 MY_EMAIL = "hellomy98d@gmail.com"
@@ -10,26 +11,31 @@ app = Flask(__name__)
 
 blogs = requests.get(url=BLOG_API).json()
 
+
 @app.route("/")
 def home():
     p = ['salman', 'haseeb', 'hunain']
     return render_template(template_name_or_list="index.html", blogs=blogs, p=p, h1_data="Salman's Blog")
 
-@app.route("/login", methods = ["POST", "GET"])
+
+@app.route("/login", methods=["POST", "GET"])
 def recieve_data():
     name = request.form["username"]
     password = request.form["password"]
     return f"<h1>Username: {name}, Password: {password}</h1>"
 
+
 @app.route("/post/<id>")
 def click_post(id):
     # id = 0
     id = int(id) - 1
-    return render_template(template_name_or_list="current_post.html", blogs=blogs,id=id)
+    return render_template(template_name_or_list="current_post.html", blogs=blogs, id=id)
+
 
 @app.route("/about")
 def about():
     return render_template(template_name_or_list="about.html", h1_data="About Me")
+
 
 @app.route("/contact", methods=["POST", "GET"])
 def contact():
@@ -52,6 +58,7 @@ def contact():
         else:
             return render_template(template_name_or_list="contact.html", h1_data=f"Error Sending Message")
     return render_template(template_name_or_list="contact.html", h1_data="Contact Me")
+
 
 @app.route("/post")
 def post():

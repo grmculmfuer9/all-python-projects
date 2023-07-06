@@ -3,6 +3,8 @@ import pandas as pd
 import plotly.express as px
 # import seaborn as sns
 import pycountry
+import os
+import sys
 
 MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
           'October', 'November', 'December']
@@ -26,8 +28,10 @@ def month(date):
     return MONTHS[date.month - 1]
 
 
+base_path = os.path.abspath(os.path.dirname(sys.argv[0]))
+print('base_path: ', os.path.join(base_path, 'mission_launches.csv'))
 pd.options.display.float_format = '{:,.2f}'.format
-df_data = pd.read_csv('mission_launches.csv')
+df_data = pd.read_csv(os.path.join(base_path, 'mission_launches.csv'))
 print(pycountry.countries)
 
 # Preliminary Data Exploration

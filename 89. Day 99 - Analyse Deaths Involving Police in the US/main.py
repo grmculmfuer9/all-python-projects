@@ -3,6 +3,9 @@ import pandas as pd
 import plotly.express as px
 import pycountry
 import seaborn as sns
+import os
+
+import sys
 
 
 # Function to convert 2-digit codes to 3-digit codes
@@ -18,11 +21,15 @@ def convert_country_code(code):
 
 pd.options.display.float_format = '{:,.2f}'.format
 
-df_hh_income = pd.read_csv('Median_Household_Income_2015.csv', encoding="windows-1252")
-df_pct_poverty = pd.read_csv('Pct_People_Below_Poverty_Level.csv', encoding="windows-1252")
-df_pct_completed_hs = pd.read_csv('Pct_Over_25_Completed_High_School.csv', encoding="windows-1252")
-df_share_race_city = pd.read_csv('Share_of_Race_By_City.csv', encoding="windows-1252")
-df_fatalities = pd.read_csv('Deaths_by_Police_US.csv', encoding="windows-1252")
+base_path = os.path.abspath(os.path.dirname(sys.argv[0]))
+
+df_hh_income = pd.read_csv(os.path.join(base_path, 'Median_Household_Income_2015.csv'), encoding="windows-1252")
+df_pct_poverty = pd.read_csv(os.path.join(base_path, 'Pct_People_Below_Poverty_Level.csv'), encoding="windows-1252")
+df_pct_completed_hs = pd.read_csv(os.path.join(base_path, 'Pct_Over_25_Completed_High_School.csv'), encoding="windows-1252")
+df_share_race_city = pd.read_csv(os.path.join(base_path, 'Share_of_Race_By_City.csv'), encoding="windows-1252")
+df_fatalities = pd.read_csv(os.path.join(base_path, 'Deaths_by_Police_US.csv'), encoding="windows-1252")
+
+print('Starting')
 
 # Replace 0 with NaN in all columns and rows in all dataframes
 df_hh_income = df_hh_income.fillna(0)

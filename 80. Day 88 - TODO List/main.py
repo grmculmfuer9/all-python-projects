@@ -13,7 +13,7 @@ base_path = os.path.abspath(os.path.dirname(sys.argv[0]))
 template_dir = os.path.join(base_path, 'templates')
 static_dir = os.path.join(base_path, 'static')
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 Bootstrap(app)
 

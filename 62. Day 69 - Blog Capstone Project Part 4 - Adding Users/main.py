@@ -1,15 +1,21 @@
-from flask import Flask, render_template, redirect, url_for, flash, abort
+import smtplib
+from datetime import date
+from functools import wraps
+
+from flask import Flask, render_template, redirect, url_for, flash, abort, request
 from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
-from datetime import date
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import relationship
-from sqlalchemy.ext.declarative import declarative_base
-from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from flask_gravatar import Gravatar
-from functools import wraps
+from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
+from werkzeug.security import generate_password_hash, check_password_hash
+
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
+
+MY_EMAIL = "hellomy98d@gmail.com"
+MY_PASSWORD = "aeyzoterumrnhoux"
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
@@ -26,7 +32,8 @@ login_manager.init_app(app)
 
 Base = declarative_base()
 
-gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False, base_url=None)
+gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False,
+                    base_url=None)
 
 
 class User(UserMixin, db.Model, Base):
@@ -92,6 +99,7 @@ def admin_only(f):
             return abort(403)
         # Otherwise continue with the route function
         return f(*args, **kwargs)
+
     return decorated_function
 
 
@@ -102,13 +110,12 @@ def get_all_posts():
         admin_login = True
     else:
         admin_login = False
-    return render_template("index.html", all_posts=posts, 
+    return render_template("index.html", all_posts=posts,
                            logged_in=current_user.is_authenticated, admin_login=admin_login)
 
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
-
     if current_user.is_authenticated:
         flash('You are already logged in')
         return redirect(url_for('get_all_posts'))
@@ -146,7 +153,6 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-
     if current_user.is_authenticated:
         flash('You are already logged in')
         return redirect(url_for('get_all_posts'))
@@ -207,8 +213,8 @@ def show_post(post_id):
         print('hi', post_id)
         return redirect(url_for('show_post', post_id=post_id))
 
-    return render_template("post.html", post=requested_post, 
-                           logged_in=current_user.is_authenticated, 
+    return render_template("post.html", post=requested_post,
+                           logged_in=current_user.is_authenticated,
                            admin_login=admin_login,
                            form=form,
                            current_user=current_user)
@@ -219,9 +225,27 @@ def about():
     return render_template("about.html", logged_in=current_user.is_authenticated)
 
 
-@app.route("/contact", methods=['GET', 'POST'])
+@app.route("/contact", methods=["POST", "GET"])
 def contact():
-    return render_template("contact.html", logged_in=current_user.is_authenticated)
+    if request.method == "POST":
+        name = request.form["name"]
+        email = request.form["email"]
+        phone = request.form["phone"]
+        message = request.form["message"]
+        if name != "" and email != "" and phone != "" and message != "":
+            email_message = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
+            with smtplib.SMTP(host="smtp.gmail.com") as connection:
+                print(0)
+                connection.starttls()
+                print(1)
+                connection.login(user=MY_EMAIL, password=MY_PASSWORD)
+                connection.sendmail(from_addr=MY_EMAIL,
+                                    to_addrs="ninjacombo99@gmail.com",
+                                    msg=f"Subject:New Message!\n\n{email_message}")
+            return render_template(template_name_or_list="contact.html", h1_data=f"Message successfully sent!")
+        else:
+            return render_template(template_name_or_list="contact.html", h1_data=f"Error Sending Message")
+    return render_template(template_name_or_list="contact.html", h1_data="Contact Me")
 
 
 @app.route("/new-post", methods=['GET', 'POST'])

@@ -3,8 +3,14 @@ import stripe
 from flask import *
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import exists
+import os
 
-import planets
+import sys
+
+
+def set_certificate(certificate_path: str) -> None:
+    stripe.ca_bundle_path = certificate_path
+
 
 SECRET_KEY = '09dkdklJ3DIl2)@#kdjlk5PsoI#OJKLkd6kfl23ioA2@BXfls3i'
 
@@ -19,9 +25,115 @@ SECRET_KEY = '09dkdklJ3DIl2)@#kdjlk5PsoI#OJKLkd6kfl23ioA2@BXfls3i'
 # else:
 #     print("It does not match >:(")
 
-app = Flask(__name__)
+planet_price_dict = {
+    'mercury': {
+            'price_data': {
+                'currency': 'usd',
+                'product_data': {
+                    'name': 'Mercury',
+                },
+            'unit_amount': 1000000,
+            },
+            'quantity': 1,
+            },
+    'venus': {
+                'price_data': {
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': 'Venus',
+                    },
+                'unit_amount': 3000000,
+                },
+                'quantity': 1,
+                },
+    'earth': {
+                'price_data': {
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': 'Earth',
+                    },
+                'unit_amount': 77777777,
+                },
+                'quantity': 1,
+                },
+    'mars': {
+                'price_data': {
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': 'Mars',
+                    },
+                'unit_amount': 5000000,
+                },
+                'quantity': 1,
+                },
+    'jupiter': {
+                'price_data': {
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': 'Jupiter',
+                    },
+                'unit_amount': 50000000,
+                },
+                'quantity': 1,
+                },
+    'saturn': {
+                'price_data': {
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': 'Saturn',
+                    },
+                'unit_amount': 50000000,
+                },
+                'quantity': 1,
+                },
+    'uranus': {
+                'price_data': {
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': 'Uranus',
+                    },
+                'unit_amount': 4206900,
+                },
+                'quantity': 1,
+                },
+    'neptune': {
+                'price_data': {
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': 'Neptune',
+                    },
+                'unit_amount': 900100,
+                },
+                'quantity': 1,
+                },
+    'pluto': {
+        'price_data': {
+            'currency': 'usd',
+            'product_data': {
+                'name': 'Pluto',
+            },
+            'unit_amount': 999999999999999,
+        },
+        'quantity': 1,
+    },
+}
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+base_path = os.path.abspath(os.path.dirname(sys.argv[0]))
+
+print('before', stripe.ca_bundle_path)
+set_certificate(f"{base_path}/stripe/data/ca-certificates.crt")
+print()
+print('after', stripe.ca_bundle_path)
+
+# Set the template and static directories relative to the base path
+template_dir = os.path.join(base_path, 'templates')
+static_dir = os.path.join(base_path, 'static')
+
+app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
+
+path_to_sql_file = os.path.join(base_path, 'instance/db.sqlite3')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{path_to_sql_file}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -33,9 +145,14 @@ class User(db.Model):
     logged_in = db.Column(db.Integer)
 
 
-# Initialize database
-# with app.app_context():
-#     db.create_all()
+# # Initialize database
+try:
+    if open(os.path.join('instance/db.sqlite3')):
+        pass
+except FileNotFoundError:
+    with app.app_context():
+        db.create_all()
+        
 
 
 @app.route('/')
@@ -62,13 +179,14 @@ YOUR_DOMAIN = 'http://127.0.0.1:5000'
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
     checkout_session = ''
+    os.environ['REQUESTS_CA_BUNDLE'] = 'https://github.com/stripe/stripe-php/blob/master/data/ca-certificates.crt'
     if request.method == 'POST':
         planet = request.form.get('name')
         checkout_session = stripe.checkout.Session.create(
-            line_items=[planets.planet_price_dict[planet]],
+            line_items=[planet_price_dict[planet]],
             mode='payment',
-            success_url='http://localhost:5000/success',
-            cancel_url='http://localhost:5000/cancel',
+            success_url='http://127.0.0.1:5000//success',
+            cancel_url='http://127.0.0.1:5000//cancel'
         )
 
     return redirect(checkout_session.url, code=303)

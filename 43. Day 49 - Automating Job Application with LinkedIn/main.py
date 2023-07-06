@@ -3,15 +3,17 @@ import time
 
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver import Chrome
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
 
 LINKEDIN_LOGIN_PAGE_URL = "https://www.linkedin.com/checkpoint/rm/sign-in-another-account?session_redirect=" \
                           "https%3A%2F%2Fwww.linkedin.com%2Ffeed%2F"
-LINKEDIN_EMAIL = os.environ.get("linkedin_email")
-LINKEDIN_PASSWORD = os.environ.get("linkedin_password")
+LINKEDIN_EMAIL = 'innocentdecentperson9@gmail.com'
+LINKEDIN_PASSWORD = '03218050206_Ab'
 
 
 def search_job(message):
@@ -312,12 +314,24 @@ def apply_to_all_jobs():
         easy_apply_to_specified_job()
 
 
-chrome_web_path = "C:\\Development\\chromedriver.exe"
-driver = Chrome(executable_path=chrome_web_path)
+# chrome_web_path = "C:\\Development\\chromedriver.exe"
+# driver = Chrome(executable_path=chrome_web_path)
+# Set up the Chrome WebDriver service
+webdriver_service = Service(ChromeDriverManager().install())
+
+print('start')
+
+# Create a Chrome WebDriver instance
+driver = Chrome(service=webdriver_service)
 driver.maximize_window()
+
+print('next')
 
 driver.get(url=LINKEDIN_LOGIN_PAGE_URL)
 
+print("let's go")
+
+# time.sleep(5)
 username = driver.find_element(value="username")
 username.send_keys(LINKEDIN_EMAIL)
 
