@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4ad1ce13-d0a0-43a9-a557-16d91e09d6d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/1. Guardians of the Galaxy/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/1. Guardians of the Galaxy/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/1. Guardians of the Galaxy/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/1. Guardians of the Galaxy/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/1. Guardians of the Galaxy/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/1. Guardians of the Galaxy/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/2. Daya Darwaza Torna Tha/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/2. Daya Darwaza Torna Tha/.idea/2. Daya Darwaza Torna Tha.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/2. Daya Darwaza Torna Tha/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/2. Daya Darwaza Torna Tha/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/2. Daya Darwaza Torna Tha/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/2. Daya Darwaza Torna Tha/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hackerrank Competition/2. Daya Darwaza Torna Tha/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/Analysis-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/EXE-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/PKG-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/PYZ-00.pyz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/PYZ-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/Tree-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/Tree-01.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/Tree-02.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/base_library.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/main.exe.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/main.pkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/warn-main.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/build/main/xref-main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/dist/main.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/main.spec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/html-forms/.idea/html-forms.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/html-forms/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../62. Day 69 - Blog Capstone Project Part 4 - Adding Users/templates/navigation_bar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../43. Day 49 - Automating Job Application with LinkedIn/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/.idea/53. Day 60 - Make the Contact Form Work.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/.idea/53. Day 60 - Make the Contact Form Work.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/html-forms/.idea/53. Day 60 - Make the Contact Form Work.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hackerrank Competition/1. Guardians of the Galaxy/.idea/1. Guardians of the Galaxy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/html-forms/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/html-forms/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/html-forms/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../53. Day 60 - Make the Contact Form Work/html-forms/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../62. Day 69 - Blog Capstone Project Part 4 - Adding Users/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../62. Day 69 - Blog Capstone Project Part 4 - Adding Users/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../62. Day 69 - Blog Capstone Project Part 4 - Adding Users/blog.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../62. Day 69 - Blog Capstone Project Part 4 - Adding Users/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../62. Day 69 - Blog Capstone Project Part 4 - Adding Users/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../62. Day 69 - Blog Capstone Project Part 4 - Adding Users/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../62. Day 69 - Blog Capstone Project Part 4 - Adding Users/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../62. Day 69 - Blog Capstone Project Part 4 - Adding Users/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../62. Day 69 - Blog Capstone Project Part 4 - Adding Users/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../80. Day 88 - TODO List/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../80. Day 88 - TODO List/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/PKG-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/main.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/main.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/warn-main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/warn-main.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/xref-main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/build/main/xref-main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/dist/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../82. Day 90 - Convert PDF to Audiobook/dist/main.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../86. Day 94 - Space Invaders/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../86. Day 94 - Space Invaders/.idea/86. Day 94 - Space Invaders.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../86. Day 94 - Space Invaders/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../86. Day 94 - Space Invaders/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../86. Day 94 - Space Invaders/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../86. Day 94 - Space Invaders/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../86. Day 94 - Space Invaders/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../86. Day 94 - Space Invaders/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../87. Day 95 - Custom API Baesd Website/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../87. Day 96 - An Online Shop/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../87. Day 96 - An Online Shop/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../88. Day 98 - Analyse and Visualize the Space Race/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../88. Day 98 - Analyse and Visualize the Space Race/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../89. Day 99 - Analyse Deaths Involving Police in the US/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../89. Day 99 - Analyse Deaths Involving Police in the US/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2RsWiiBc2Wh82XfGY3KJ4oXZjOm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/User/Desktop/All Folders and Files/100 days of Python/1. Projects/Twitter Insights"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Twitter Insights" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4ad1ce13-d0a0-43a9-a557-16d91e09d6d2" name="Changes" comment="" />
+      <created>1688039397884</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688039397884</updated>
+    </task>
+    <servers />
+  </component>
+</project>
